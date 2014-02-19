@@ -83,7 +83,7 @@ $this->pageTitle = Yii::app()->name . ' - Users Summary';
 		*/
 		array(
             'class' => 'CButtonColumn',
-          
+			'template'=>'{update}{delete}',
 			'headerHtmlOptions' => array('class' => 'button-column'),
         )
     ),

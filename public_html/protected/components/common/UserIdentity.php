@@ -20,7 +20,7 @@ class UserIdentity extends CUserIdentity
 	 */
 	public function authenticate()
 	{
-		$record = Users::model()->findByAttributes(array('username'=>$this->username, 'active' => 1));
+		$record = Users::model()->findByAttributes(array('username'=>$this->username, 'status' => 1));
 		/*@var $record Users*/
 		
 		if($record === null)

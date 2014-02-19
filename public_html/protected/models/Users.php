@@ -159,6 +159,8 @@ class Users extends ActiveRecord
 		));
 		
 		
+	
+	}
 		/**
 	 * Function to get the full name of a user
 	 * 
@@ -169,5 +171,4 @@ class Users extends ActiveRecord
 		return $this->firstname . " " . $this->lastname;
 	}
 	
-	}
 }

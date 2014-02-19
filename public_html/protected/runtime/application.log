@@ -1517,3 +1517,177 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/index.php?r=users/create
 ---
+2014/02/19 09:38:06 [error] [exception.CDbException] exception 'CDbException' with message 'Table "users" does not have a column named "active".' in E:\xampp\htdocs\mads\yii\framework\db\schema\CDbCommandBuilder.php:570
+Stack trace:
+#0 E:\xampp\htdocs\mads\yii\framework\db\ar\CActiveRecord.php(1454): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 E:\xampp\htdocs\mads\public_html\protected\components\common\UserIdentity.php(23): CActiveRecord->findByAttributes(Array)
+#2 E:\xampp\htdocs\mads\public_html\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#3 E:\xampp\htdocs\mads\yii\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#4 E:\xampp\htdocs\mads\yii\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 E:\xampp\htdocs\mads\yii\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#6 E:\xampp\htdocs\mads\public_html\protected\controllers\SiteController.php(88): CModel->validate()
+#7 E:\xampp\htdocs\mads\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#8 E:\xampp\htdocs\mads\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 E:\xampp\htdocs\mads\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 E:\xampp\htdocs\mads\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 E:\xampp\htdocs\mads\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#12 E:\xampp\htdocs\mads\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#13 E:\xampp\htdocs\mads\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 E:\xampp\htdocs\mads\public_html\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://dev.mads.co.in/index.php?r=site/login
+---
+2014/02/19 09:40:58 [error] [php] include(CPasswordHelper.php): failed to open stream: No such file or directory (E:\xampp\htdocs\mads\yii\framework\YiiBase.php:418)
+Stack trace:
+#0 E:\xampp\htdocs\mads\public_html\protected\components\common\UserIdentity.php(30): spl_autoload_call()
+#1 E:\xampp\htdocs\mads\public_html\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 E:\xampp\htdocs\mads\yii\framework\validators\CInlineValidator.php(43): LoginForm->authenticate()
+#3 E:\xampp\htdocs\mads\yii\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute()
+#4 E:\xampp\htdocs\mads\yii\framework\base\CModel.php(158): CInlineValidator->validate()
+#5 E:\xampp\htdocs\mads\public_html\protected\controllers\SiteController.php(88): LoginForm->validate()
+#6 E:\xampp\htdocs\mads\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#7 E:\xampp\htdocs\mads\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#8 E:\xampp\htdocs\mads\yii\framework\web\CController.php(287): SiteController->runAction()
+#9 E:\xampp\htdocs\mads\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#10 E:\xampp\htdocs\mads\yii\framework\web\CWebApplication.php(276): SiteController->run()
+#11 E:\xampp\htdocs\mads\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#12 E:\xampp\htdocs\mads\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 E:\xampp\htdocs\mads\public_html\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=site/login
+in E:\xampp\htdocs\mads\public_html\protected\components\common\UserIdentity.php (30)
+in E:\xampp\htdocs\mads\public_html\protected\models\LoginForm.php (52)
+in E:\xampp\htdocs\mads\public_html\protected\controllers\SiteController.php (88)
+2014/02/19 09:49:23 [error] [exception.CException] exception 'CException' with message 'Users and its behaviors do not have a method or closure named "getFullname".' in E:\xampp\htdocs\mads\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 E:\xampp\htdocs\mads\yii\framework\db\ar\CActiveRecord.php(227): CComponent->__call('getFullname', Array)
+#1 E:\xampp\htdocs\mads\public_html\protected\components\common\UserIdentity.php(47): CActiveRecord->__call('getFullname', Array)
+#2 E:\xampp\htdocs\mads\public_html\protected\components\common\UserIdentity.php(47): Users->getFullname()
+#3 E:\xampp\htdocs\mads\public_html\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#4 E:\xampp\htdocs\mads\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#5 E:\xampp\htdocs\mads\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 E:\xampp\htdocs\mads\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#7 E:\xampp\htdocs\mads\public_html\protected\controllers\SiteController.php(88): CModel->validate()
+#8 E:\xampp\htdocs\mads\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#9 E:\xampp\htdocs\mads\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 E:\xampp\htdocs\mads\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 E:\xampp\htdocs\mads\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\xampp\htdocs\mads\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#13 E:\xampp\htdocs\mads\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#14 E:\xampp\htdocs\mads\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 E:\xampp\htdocs\mads\public_html\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://dev.mads.co.in/index.php?r=site/login
+---
+2014/02/19 09:51:23 [error] [exception.CException] exception 'CException' with message 'Users and its behaviors do not have a method or closure named "getFullname".' in E:\xampp\htdocs\mads\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 E:\xampp\htdocs\mads\yii\framework\db\ar\CActiveRecord.php(227): CComponent->__call('getFullname', Array)
+#1 E:\xampp\htdocs\mads\public_html\protected\components\common\UserIdentity.php(47): CActiveRecord->__call('getFullname', Array)
+#2 E:\xampp\htdocs\mads\public_html\protected\components\common\UserIdentity.php(47): Users->getFullname()
+#3 E:\xampp\htdocs\mads\public_html\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#4 E:\xampp\htdocs\mads\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#5 E:\xampp\htdocs\mads\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 E:\xampp\htdocs\mads\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#7 E:\xampp\htdocs\mads\public_html\protected\controllers\SiteController.php(88): CModel->validate()
+#8 E:\xampp\htdocs\mads\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#9 E:\xampp\htdocs\mads\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 E:\xampp\htdocs\mads\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 E:\xampp\htdocs\mads\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\xampp\htdocs\mads\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#13 E:\xampp\htdocs\mads\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#14 E:\xampp\htdocs\mads\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 E:\xampp\htdocs\mads\public_html\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://dev.mads.co.in/index.php?r=site/login
+---
+2014/02/19 09:52:11 [error] [exception.CException] exception 'CException' with message 'Users and its behaviors do not have a method or closure named "getFullname".' in E:\xampp\htdocs\mads\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 E:\xampp\htdocs\mads\yii\framework\db\ar\CActiveRecord.php(227): CComponent->__call('getFullname', Array)
+#1 E:\xampp\htdocs\mads\public_html\protected\components\common\UserIdentity.php(47): CActiveRecord->__call('getFullname', Array)
+#2 E:\xampp\htdocs\mads\public_html\protected\components\common\UserIdentity.php(47): Users->getFullname()
+#3 E:\xampp\htdocs\mads\public_html\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#4 E:\xampp\htdocs\mads\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#5 E:\xampp\htdocs\mads\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 E:\xampp\htdocs\mads\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#7 E:\xampp\htdocs\mads\public_html\protected\controllers\SiteController.php(88): CModel->validate()
+#8 E:\xampp\htdocs\mads\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#9 E:\xampp\htdocs\mads\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 E:\xampp\htdocs\mads\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 E:\xampp\htdocs\mads\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\xampp\htdocs\mads\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#13 E:\xampp\htdocs\mads\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#14 E:\xampp\htdocs\mads\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 E:\xampp\htdocs\mads\public_html\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://dev.mads.co.in/index.php?r=site/login
+---
+2014/02/19 09:55:29 [error] [exception.CException] exception 'CException' with message 'Users and its behaviors do not have a method or closure named "getFullname".' in E:\xampp\htdocs\mads\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 E:\xampp\htdocs\mads\yii\framework\db\ar\CActiveRecord.php(227): CComponent->__call('getFullname', Array)
+#1 E:\xampp\htdocs\mads\public_html\protected\components\common\UserIdentity.php(47): CActiveRecord->__call('getFullname', Array)
+#2 E:\xampp\htdocs\mads\public_html\protected\components\common\UserIdentity.php(47): Users->getFullname()
+#3 E:\xampp\htdocs\mads\public_html\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#4 E:\xampp\htdocs\mads\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#5 E:\xampp\htdocs\mads\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 E:\xampp\htdocs\mads\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#7 E:\xampp\htdocs\mads\public_html\protected\controllers\SiteController.php(88): CModel->validate()
+#8 E:\xampp\htdocs\mads\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#9 E:\xampp\htdocs\mads\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 E:\xampp\htdocs\mads\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 E:\xampp\htdocs\mads\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\xampp\htdocs\mads\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#13 E:\xampp\htdocs\mads\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#14 E:\xampp\htdocs\mads\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 E:\xampp\htdocs\mads\public_html\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://dev.mads.co.in/index.php?r=site/login
+---
+2014/02/19 09:57:10 [error] [exception.CException] exception 'CException' with message 'Property "Users.last_login_ip_address" is not defined.' in E:\xampp\htdocs\mads\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 E:\xampp\htdocs\mads\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('last_login_ip_a...', '127.0.0.1')
+#1 E:\xampp\htdocs\mads\public_html\protected\components\common\UserIdentity.php(51): CActiveRecord->__set('last_login_ip_a...', '127.0.0.1')
+#2 E:\xampp\htdocs\mads\public_html\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#3 E:\xampp\htdocs\mads\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 E:\xampp\htdocs\mads\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 E:\xampp\htdocs\mads\yii\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 E:\xampp\htdocs\mads\public_html\protected\controllers\SiteController.php(88): CModel->validate()
+#7 E:\xampp\htdocs\mads\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#8 E:\xampp\htdocs\mads\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 E:\xampp\htdocs\mads\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 E:\xampp\htdocs\mads\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 E:\xampp\htdocs\mads\yii\framework\web\CWebApplication.php(282): CController->run('login')
+#12 E:\xampp\htdocs\mads\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 E:\xampp\htdocs\mads\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 E:\xampp\htdocs\mads\public_html\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://dev.mads.co.in/index.php?r=site/login
+---
+2014/02/19 10:47:27 [error] [exception.CException] exception 'CException' with message 'Property "CButtonColumn.templete" is not defined.' in E:\xampp\htdocs\mads\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 E:\xampp\htdocs\mads\yii\framework\YiiBase.php(220): CComponent->__set('templete', '{update}{delete...')
+#1 E:\xampp\htdocs\mads\yii\framework\zii\widgets\grid\CGridView.php(388): YiiBase::createComponent(Array, Object(CGridView))
+#2 E:\xampp\htdocs\mads\yii\framework\zii\widgets\grid\CGridView.php(359): CGridView->initColumns()
+#3 E:\xampp\htdocs\mads\yii\framework\web\CBaseController.php(147): CGridView->init()
+#4 E:\xampp\htdocs\mads\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#5 E:\xampp\htdocs\mads\public_html\protected\views\user\index.php(90): CBaseController->widget('zii.widgets.gri...', Array)
+#6 E:\xampp\htdocs\mads\yii\framework\web\CBaseController.php(126): require('E:\xampp\htdocs...')
+#7 E:\xampp\htdocs\mads\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
+#8 E:\xampp\htdocs\mads\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
+#9 E:\xampp\htdocs\mads\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#10 E:\xampp\htdocs\mads\public_html\protected\controllers\UserController.php(40): CController->render('index', Array)
+#11 E:\xampp\htdocs\mads\yii\framework\web\actions\CInlineAction.php(49): UserController->actionIndex()
+#12 E:\xampp\htdocs\mads\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 E:\xampp\htdocs\mads\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 E:\xampp\htdocs\mads\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 E:\xampp\htdocs\mads\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#16 E:\xampp\htdocs\mads\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/index')
+#17 E:\xampp\htdocs\mads\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 E:\xampp\htdocs\mads\public_html\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/index.php?r=user/index
+---

@@ -176,7 +176,7 @@ class MediaFiles extends ActiveRecord
 			$referenceModelColumn = ($this->user_id > 0) ? 'user_id' : $referenceModelColumn;
 			$referenceModelColumn = ($this->user_post_id > 0) ? 'user_post_id' : $referenceModelColumn;
 		
-	//		$this->storeMediaFileURLInCache($referenceModelColumn, $this->{$referenceModelColumn}, $this->column_name, $url, $this->image_identifier);
+		$this->storeMediaFileURLInCache($referenceModelColumn, $this->{$referenceModelColumn}, $this->column_name, $url, $this->image_identifier);
 		}
 				
 		return parent::afterSave();
@@ -218,12 +218,12 @@ class MediaFiles extends ActiveRecord
 	 */
 	 
 	 
-/*	public static function storeMediaFileURLInCache($referenceModelKey, $referenceModelKeyValue, $referenceModelColumn, $url, $imageIdentifier = 'Orig')
+	public static function storeMediaFileURLInCache($referenceModelKey, $referenceModelKeyValue, $referenceModelColumn, $url, $imageIdentifier = 'Orig')
 	{
 		Yii::app()->cache->set("MediaFile-{$referenceModelKey}-{$referenceModelKeyValue}-{$referenceModelColumn}-{$imageIdentifier}", $url, AppConstants::ONE_MONTH_CACHE_TIME);
 	}
 	
-*/
+
 	/**
 	 * Function to get the Media File URL from cache.
 	 * 

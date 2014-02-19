@@ -10,7 +10,7 @@
  */
 
 //development
-/*
+
 if ($_SERVER["APPLICATION_ENV"] == "DEV")
 {
 	return array(
@@ -19,7 +19,7 @@ if ($_SERVER["APPLICATION_ENV"] == "DEV")
             /*'servers' => array(
                 array('host' => '127.0.0.1', 'port' => 11211, 'weight' => 60),
             ),*/
-/*        );
+        );
 }
 //UAT
 else if ($_SERVER["APPLICATION_ENV"] == "UAT")
@@ -31,9 +31,10 @@ else if ($_SERVER["APPLICATION_ENV"] == "UAT")
             ),
         );
 }
+
 //live
 else
-{ */
+{ 
 	return array(
             'class' => 'CMemCache',
             'servers' => array(
@@ -41,4 +42,4 @@ else
             ),
         );
 		
-//}
+}
