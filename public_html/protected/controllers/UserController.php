@@ -47,6 +47,8 @@ class UserController extends Controller
 	{
 		$model = new Users('insert');
 		
+		
+		
 		if(isset($_POST['Users']))
 		{
 			//Function to handle post data
@@ -154,9 +156,11 @@ class UserController extends Controller
 	 */
 	private function _uploadUserProfilePicture($model, $scenario)
 	{
+	
+		
 		$dirPath = Yii::app()->uploader->createDirectoryByLimiter(Yii::getPathOfAlias(AppConstants::UPLOADS_USERS_PATH_ALIAS), $model->user_id);
 		
-		list($saveResult, $uploadedfilesArr) = ControllerFileUploadHelper::uploadFiles($this, $model, $scenario, $dirPath);
+		list($saveResult, $uploadedfilesArr) = ControllerFileUploadHelper::uploadFiles($this, $model, $scenario, $dirPath, AppConstants::$USER_MEDIA_CONFIGURATION);
 		
 		return $saveResult;
 	}

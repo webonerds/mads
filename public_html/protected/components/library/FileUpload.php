@@ -121,6 +121,7 @@ class FileUpload extends CComponent
 	public function createDirectoryByLimiter($baseDirPath = "", $indxPk = 0, $mode = self::DIR_MODE)
 	{
 		$dirPath = self::getDirectoryLimiterPath($baseDirPath, $indxPk );
+	
 		
 		self::createDirectory($dirPath, $mode);
 		

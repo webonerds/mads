@@ -75,10 +75,10 @@ class ActiveRecord extends CActiveRecord
 				}
 				
 				//lets store the url in the cache
-				/*if ($url !== FALSE)
+				if ($url !== FALSE)
 				{
 					MediaFiles::storeMediaFileURLInCache(MediaFiles::_GetMediaFilesReferenceColumnName($this), $this->getPrimaryKey(), $fieldName, $url);
-				}*/
+				}
 			}
 			
 			return $url;
@@ -124,10 +124,10 @@ class ActiveRecord extends CActiveRecord
 			}
 			
 			//lets store the url in the cache
-		/*	if ($url !== FALSE)
+			if ($url !== FALSE)
 			{
 				MediaFiles::storeMediaFileURLInCache(get_class($this), $this->getPrimaryKey(), $fieldPrefix, $url, $imageIdentifier);
-			}*/
+			}
 			
 			return $url;
 		}

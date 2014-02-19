@@ -27,7 +27,7 @@ $this->pageTitle = Yii::app()->name . ' - Users Summary';
 	'rowCssClass' => array('gradeB odd', 'gradeB even'),
 	'afterAjaxUpdate'=>'afterAjaxUpdate',
     'columns' => array(
-       /* array(
+       array(
             'name' => 'profile_picture_filename',
             'type' => 'raw',
             'value' => function(Users $data){
@@ -41,7 +41,7 @@ $this->pageTitle = Yii::app()->name . ' - Users Summary';
 			'sortable' => false,
 			'header' => 'Profile Picture',
 			'headerHtmlOptions' => array('width' => '10%'),
-        ), */
+        ), 
 		array(
             'name' => 'firstname',
             'type' => 'raw',

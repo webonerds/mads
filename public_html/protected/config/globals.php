@@ -27,6 +27,7 @@ class AppConstants
 	//News Entity Specifics
 	public static $NEWS_MEDIA_CONFIGURATION = array('XS' => array('prefix' => 'img_132_72_', 'width' => 132, 'height' => 72));
 
+	
 	//Email Messages Entity Specifics
 	const MARK_AS_READ = 1;
 	
@@ -43,6 +44,14 @@ class AppConstants
 	const UPLOADS_USERS_PATH_ALIAS = 'appwebroot.uploads.users';
 	const UPLOADS_PRODUCTS_PATH_ALIAS = 'appwebroot.uploads.products';
 
+	public static $USER_MEDIA_CONFIGURATION = array(
+	'L' =>array('prefix' => 'img_640_640_', 'width' => 640, 'height' => 640),
+	'M' =>array('prefix' => 'img_400_350_', 'width' => 400, 'height' => 350),
+	's' =>array('prefix' => 'img_150_120_', 'width' => 150, 'height' => 120),
+
+		);
+		
+		
 //User Entity Specific
 /*	const USERS_SECURITY_SALT = 'g7h4hf%^fjdkdsdfds' ; //time in hours
 	const USERS_ADMIN_USER_ID = 1;	
@@ -56,9 +65,7 @@ class AppConstants
 	const USERS_REGISTER_SOURCE_WEB = 'web';
 	const USERS_REGISTER_SOURCE_FACEBOOK = 'facebook';
 	
-	public static $USER_MEDIA_CONFIGURATION = array('L' => 
-			array('prefix' => 'img_640_640_', 'width' => 640, 'height' => 640)
-		);
+	
 	
 	//Template Entity Specifics
 	const DEFAULT_TEMPLATE_NAME = "default";

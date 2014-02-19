@@ -27,7 +27,7 @@ class UserIdentity extends CUserIdentity
 		{
             $this->errorCode=self::ERROR_USERNAME_INVALID;
 		}
-        else if( !CPasswordHelper::verifyPassword($this->password, $record->password) )
+        else if( MD5($this->password)!= $record->password )
 		{
             $this->errorCode=self::ERROR_PASSWORD_INVALID;
 		}

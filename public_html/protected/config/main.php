@@ -6,7 +6,7 @@ $frontend = dirname(dirname(__FILE__)).DIRECTORY_SEPARATOR;
 
 
 Yii::setPathOfAlias('frontend',$frontend);
-Yii::setPathOfAlias('appwebroot', $_SERVER['DOCUMENT_ROOT']);
+Yii::setPathOfAlias('appwebroot', $frontend);
 
 
 
@@ -67,6 +67,14 @@ return array(
             'cleanPost'     => false,  
             'cleanGet'      => false,   
         ),
+		
+		'uploader' => array(
+			'class' => 'frontend.components.library.FileUpload'
+		),
+		'phpThumb'=>array(
+			'class'=>'frontend.extensions.EPhpThumb.EPhpThumb',
+		),
+
 		// uncomment the following to enable URLs in path-format
 		/*
 		'urlManager'=>array(
@@ -82,6 +90,16 @@ return array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 		),
 		// uncmment the following to use a MySQL database
+	//	'db' => require_once($frontend . "/config/db_config.php"),
+		
+		
+		'db'=>array(
+			'connectionString' => 'mysql:host=mysql8.000webhost.com;dbname=a9443242_adseng',
+			'emulatePrepare' => true,
+			'username' => 'a9443242_ads',
+			'password' => 'ads!@#$%^',
+			'charset' => 'utf8',
+		),
 		
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=ads_engine_db',
@@ -90,7 +108,9 @@ return array(
 			'password' => 'password',
 			'charset' => 'utf8',
 		),
-	
+		
+		
+		
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
             'errorAction'=>'site/error',
