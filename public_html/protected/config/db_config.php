@@ -53,12 +53,10 @@ else if ($_SERVER["APPLICATION_ENV"] == "UAT")
 else
 {
 
-echo $mysqlConfig['host'];
-exit;
 
 	return array(
 			'class'=>'frontend.extensions.dbsplit.DbConnectionMan',
-			'connectionString' => 'mysql:host='. $mysqlConfig['host'] .';dbname=' . $mysqlConfig['name'],
+			//'connectionString' => 'mysql:host='. $mysqlConfig['host'] .';dbname=' . $mysqlConfig['name'],
 			'schemaCachingDuration' => 3600,
 			'enableProfiling' => true,
 			'emulatePrepare' => true,

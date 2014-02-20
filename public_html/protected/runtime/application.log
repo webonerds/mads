@@ -1742,3 +1742,25 @@ Stack trace:
 #17 {main}
 REQUEST_URI=/index.php?r=user/
 ---
+2014/02/19 16:13:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "delete".' in E:\xampp\htdocs\mads\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\mads\yii\framework\web\CController.php(270): CController->missingAction('delete')
+#1 E:\xampp\htdocs\mads\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#2 E:\xampp\htdocs\mads\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/delete')
+#3 E:\xampp\htdocs\mads\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\mads\public_html\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?ajax=yw0&id=26&r=user%2Fdelete
+HTTP_REFERER=http://dev.mads.co.in/index.php?r=user/
+---
+2014/02/19 16:13:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "delete".' in E:\xampp\htdocs\mads\yii\framework\web\CController.php:483
+Stack trace:
+#0 E:\xampp\htdocs\mads\yii\framework\web\CController.php(270): CController->missingAction('delete')
+#1 E:\xampp\htdocs\mads\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#2 E:\xampp\htdocs\mads\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/delete')
+#3 E:\xampp\htdocs\mads\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\mads\public_html\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?ajax=yw0&id=41&r=user%2Fdelete
+HTTP_REFERER=http://dev.mads.co.in/index.php?r=user/
+---

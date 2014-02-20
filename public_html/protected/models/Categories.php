@@ -8,13 +8,18 @@
  * @property string $title
  * @property string $brief
  * @property string $description
- * @property integer $status
+ * @property integer $active
  * @property integer $created_by
  * @property string $created_on
  * @property integer $modified_by
  * @property string $modified_on
+ *
+ * The followings are the available model relations:
+ * @property Users $createdBy
+ * @property Users $modifiedBy
+ * @property UserPosts[] $userPosts
  */
-class Categories extends CActiveRecord
+class Categories extends ActiveRecord
 {
 	/**
 	 * @return string the associated database table name
@@ -32,13 +37,13 @@ class Categories extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title', 'required'),
-			array('status, created_by, modified_by', 'numerical', 'integerOnly'=>true),
+			array('title,brief,description', 'required'),
+			array('active, created_by, modified_by', 'numerical', 'integerOnly'=>true),
 			array('title', 'length', 'max'=>100),
 			array('brief, description, created_on, modified_on', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('category_id, title, brief, description, status, created_by, created_on, modified_by, modified_on', 'safe', 'on'=>'search'),
+			array('category_id, title, brief, description, active, created_by, created_on, modified_by, modified_on', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -50,6 +55,9 @@ class Categories extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'createdBy' => array(self::BELONGS_TO, 'Users', 'created_by'),
+			'modifiedBy' => array(self::BELONGS_TO, 'Users', 'modified_by'),
+			'userPosts' => array(self::HAS_MANY, 'UserPosts', 'category_id'),
 		);
 	}
 
@@ -63,7 +71,7 @@ class Categories extends CActiveRecord
 			'title' => 'Title',
 			'brief' => 'Brief',
 			'description' => 'Description',
-			'status' => 'Status',
+			'active' => 'Active',
 			'created_by' => 'Created By',
 			'created_on' => 'Created On',
 			'modified_by' => 'Modified By',
@@ -93,7 +101,7 @@ class Categories extends CActiveRecord
 		$criteria->compare('title',$this->title,true);
 		$criteria->compare('brief',$this->brief,true);
 		$criteria->compare('description',$this->description,true);
-		$criteria->compare('status',$this->status);
+		$criteria->compare('active',$this->active);
 		$criteria->compare('created_by',$this->created_by);
 		$criteria->compare('created_on',$this->created_on,true);
 		$criteria->compare('modified_by',$this->modified_by);
