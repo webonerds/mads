@@ -87,14 +87,14 @@ return array(
 		),
 		*/
 		'db'=>array(
-			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
+			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db(1)',
 		),
 		// uncmment the following to use a MySQL database
 	//	'db' => require_once($frontend . "/config/db_config.php"),
 		
 		
 		'db'=>array(
-			'connectionString' => 'mysql:host=mysql8.000webhost.com;dbname=a9443242_adseng',
+			'connectionString' => 'mysql:host=mysql8.000webhost.com;dbname=ads_engine_db',
 			'emulatePrepare' => true,
 			'username' => 'a9443242_ads',
 			'password' => 'ads!@#$%^',
@@ -137,5 +137,6 @@ return array(
 	'params'=>array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
+		'dateformat'=>'yy-mm-dd'
 	),
 );

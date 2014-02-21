@@ -63,6 +63,58 @@
 		<div><?php echo $form->textField($model, 'paypal_email', array('required' => 'required', 'type' => 'email')); ?></div>
 		<?php echo $form->error($model, 'paypal_email'); ?>
 	</section>
+    <section>
+		
+            <?php echo $form->labelEx($model,'date_of_birth'); ?>
+            <div><?php
+                     $this->widget( 'zii.widgets.jui.CJuiDatePicker', array(
+                  'model' => $model, // Your model
+                  'attribute' => 'date_of_birth', // Attribute for input
+                  'options' => array(
+                          'dateFormat' => Yii::app()->params->dateformat,
+                          'changeMonth' => 'true',
+                          'value'=>Yii::app()->dateFormatter->format("Y-m-d",strtotime($model->date_of_birth)),
+                          'changeYear' => 'true',
+                          'showAnim' =>'slide',
+                           'showOn' => 'both',
+                          //'showOn'=>'button',
+                          'buttonImage'=>Yii::app()->baseUrl."/images/canlender.jpg",
+                         // 'buttonImageOnly'=>true,
+                         'yearRange'=>'1970:2013',
+                          'style'=>'padding-left: 9px; z-index:999;',
+                        ),
+                      
+                        'htmlOptions' => array(
+                          'autocomplete' => 'off',
+                          'size' => 12,
+                          'maxlength' => 10,
+                          'class'=>'date input pop-up-calendar dp-applied span-4',
+                        ),
+                      
+                ));
+          ?></div>
+            <?php echo $form->error($model,'date_of_birth'); ?>
+        
+
+	</section>
+
+     <section>
+		<?php echo $form->labelEx($model, 'phone'); ?>
+		<div><?php echo $form->textField($model, 'phone', array('required' => 'required')); ?></div>
+		<?php echo $form->error($model, 'phone'); ?>
+	</section>
+    <section>
+		<?php echo $form->labelEx($model, 'address'); ?>
+		<div><?php echo $form->textArea($model, 'address', array('required' => 'required')); ?></div>
+		<?php echo $form->error($model, 'address'); ?>
+	</section>
+    <section>
+		<?php echo $form->labelEx($model, 'sex'); ?>
+		<div><?php echo $form->dropDownList($model,'sex',array('empty'=>'selected','male'=>'male','female'=>'female')); ?></div>
+		<?php echo $form->error($model, 'sex'); ?>
+	</section>
+
+
 
 	<section>
 		<?php echo $form->labelEx($model, 'profile_description'); ?>
@@ -87,10 +139,7 @@
 
 </fieldset>
  
-    <?php
-    if (MapSettings::DISPLAY_MAP_ADS == 1) :
-        Yii::app()->clientScript->registerScriptFile('https://maps.googleapis.com/maps/api/js?v=3.5&sensor=false&key='.MapSettings::GAPI,CClientScript::POS_HEAD);
-    ?>
+    
 		<?php echo $form->labelEx($model, 'address'); ?>
 		
         <script type="text/javascript">
@@ -159,7 +208,7 @@
         }
       initializeGMap();
         </script>
-    <?php endif; ?>
+    
 </fieldset>
 
 <fieldset>

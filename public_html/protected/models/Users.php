@@ -58,16 +58,29 @@ class Users extends ActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+		    array('private_email,profile_picture_media_file_id','required'),
+			array('username,firstname, lastname','CRegularExpressionValidator', 'pattern'=>'/^[a-zA-z]{3,}$/','message'=>"{attribute} should contain only letters and should have            atleast 3 of them."),
+
 			array('profile_picture_media_file_id, email_newsletter, email_address_verified, status', 'numerical', 'integerOnly'=>true),
 			array('firstname, lastname, username, password, register_surce, paypal_email, email, lat, logn, private_email, reset_password_key', 'length', 'max'=>1000),
 			array('phone', 'length', 'max'=>100),
 			array('sex', 'length', 'max'=>6),
+			array('username','unique'),
+			array('private_email','email'),
+			array('date_of_birth','checkdate'),
 			array('date_of_birth, address, profile_description, reset_password_timestamp, last_login_datetime, created_on, modified_on', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('user_id, firstname, lastname, username, password, register_surce, date_of_birth, phone, paypal_email, email, address, profile_description, lat, logn, sex, private_email, profile_picture_media_file_id, email_newsletter, reset_password_key, reset_password_timestamp, last_login_datetime, email_address_verified, status, created_on, modified_on', 'safe', 'on'=>'search'),
 		);
 	}
+	public function checkdate($attribute,$params)
+	{
+	
+			if($this->date_of_birth>date('Y-m-d',(time())))
+				$this->addError('date_of_birth','Incorrect date');
+	}
+
 
 	/**
 	 * @return array relational rules.
