@@ -35,6 +35,7 @@
 				
 				array('label'=>'Sign Up', 'url'=>array('/user/create'),'visible'=>Yii::app()->user->isGuest),
 				
+                //array('label'=>'country', 'url'=>array('/country/create')),
 
 				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
 				array('label'=>'Contact', 'url'=>array('/site/contact')),

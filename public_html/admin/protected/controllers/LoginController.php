@@ -31,6 +31,7 @@ class LoginController extends Controller
 	 */
 	public function actionIndex()
 	{
+		
 		$model=new LoginForm;
 
 		// if it is ajax validation request

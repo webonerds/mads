@@ -53,6 +53,7 @@ return array(
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
+			
 			'loginUrl' => array('login/index'),
 			'class' => 'WebUser',
 			//'identityCookie' => array('domain' => '.thankful.com.au', 'path' => '/'/*, 'name' => 'PHPSESSID_ADMIN'*/),

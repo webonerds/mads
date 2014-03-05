@@ -398,3 +398,129 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/index.php?r=admin
 ---
+2014/02/22 06:58:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "country/create".' in C:\xampp\htdocs\mads\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\mads\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('country/create')
+#1 C:\xampp\htdocs\mads\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\mads\public_html\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=country/create
+HTTP_REFERER=http://dev.mads.co.in/
+---
+2014/02/24 10:13:25 [error] [exception.CException] exception 'CException' with message 'CMemCache requires PHP memcache extension to be loaded.' in C:\xampp\htdocs\mads\yii\framework\caching\CMemCache.php:116
+Stack trace:
+#0 C:\xampp\htdocs\mads\yii\framework\caching\CMemCache.php(89): CMemCache->getMemCache()
+#1 C:\xampp\htdocs\mads\yii\framework\base\CModule.php(387): CMemCache->init()
+#2 C:\xampp\htdocs\mads\yii\framework\base\CModule.php(103): CModule->getComponent('cache')
+#3 C:\xampp\htdocs\mads\public_html\protected\models\MediaFiles.php(223): CModule->__get('cache')
+#4 C:\xampp\htdocs\mads\public_html\protected\models\ActiveRecord.php(80): MediaFiles::storeMediaFileURLInCache('user_id', '25', 'profile_picture...', '/E:/xampp/htdoc...')
+#5 C:\xampp\htdocs\mads\public_html\protected\components\library\ViewFormHelper.php(32): ActiveRecord->getUploadedFileFullPath('profile_picture')
+#6 C:\xampp\htdocs\mads\public_html\protected\views\user\_form_update.php(129): ViewFormHelper::imageActions(Object(UserController), Object(Users), 'profile_picture', Array)
+#7 C:\xampp\htdocs\mads\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#8 C:\xampp\htdocs\mads\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\mads\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#10 C:\xampp\htdocs\mads\public_html\protected\views\user\update.php(18): CController->renderPartial('_form_update', Array)
+#11 C:\xampp\htdocs\mads\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#12 C:\xampp\htdocs\mads\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\mads\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#14 C:\xampp\htdocs\mads\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#15 C:\xampp\htdocs\mads\public_html\protected\controllers\UserController.php(99): CController->render('update', Array)
+#16 C:\xampp\htdocs\mads\yii\framework\web\actions\CInlineAction.php(49): UserController->actionUpdate()
+#17 C:\xampp\htdocs\mads\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\mads\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\mads\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\mads\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#21 C:\xampp\htdocs\mads\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/update')
+#22 C:\xampp\htdocs\mads\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\mads\public_html\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/mads/public_html/index.php?r=user/update&id=25
+HTTP_REFERER=http://localhost/mads/public_html/index.php?r=user/index
+---
+2014/02/24 11:13:17 [error] [exception.CException] exception 'CException' with message 'CMemCache requires PHP memcache extension to be loaded.' in C:\xampp\htdocs\mads\yii\framework\caching\CMemCache.php:116
+Stack trace:
+#0 C:\xampp\htdocs\mads\yii\framework\caching\CMemCache.php(89): CMemCache->getMemCache()
+#1 C:\xampp\htdocs\mads\yii\framework\base\CModule.php(387): CMemCache->init()
+#2 C:\xampp\htdocs\mads\yii\framework\base\CModule.php(103): CModule->getComponent('cache')
+#3 C:\xampp\htdocs\mads\public_html\protected\models\MediaFiles.php(223): CModule->__get('cache')
+#4 C:\xampp\htdocs\mads\public_html\protected\models\ActiveRecord.php(80): MediaFiles::storeMediaFileURLInCache('user_id', '25', 'profile_picture...', '/E:/xampp/htdoc...')
+#5 C:\xampp\htdocs\mads\public_html\protected\components\library\ViewFormHelper.php(32): ActiveRecord->getUploadedFileFullPath('profile_picture')
+#6 C:\xampp\htdocs\mads\public_html\protected\views\user\_form_update.php(129): ViewFormHelper::imageActions(Object(UserController), Object(Users), 'profile_picture', Array)
+#7 C:\xampp\htdocs\mads\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#8 C:\xampp\htdocs\mads\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\mads\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#10 C:\xampp\htdocs\mads\public_html\protected\views\user\update.php(18): CController->renderPartial('_form_update', Array)
+#11 C:\xampp\htdocs\mads\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#12 C:\xampp\htdocs\mads\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\mads\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#14 C:\xampp\htdocs\mads\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#15 C:\xampp\htdocs\mads\public_html\protected\controllers\UserController.php(99): CController->render('update', Array)
+#16 C:\xampp\htdocs\mads\yii\framework\web\actions\CInlineAction.php(49): UserController->actionUpdate()
+#17 C:\xampp\htdocs\mads\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\mads\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\mads\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\mads\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#21 C:\xampp\htdocs\mads\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/update')
+#22 C:\xampp\htdocs\mads\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\mads\public_html\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/mads/public_html/index.php?r=user/update&id=25
+---
+2014/02/24 11:18:30 [error] [exception.CException] exception 'CException' with message 'CMemCache requires PHP memcache extension to be loaded.' in C:\xampp\htdocs\mads\yii\framework\caching\CMemCache.php:116
+Stack trace:
+#0 C:\xampp\htdocs\mads\yii\framework\caching\CMemCache.php(89): CMemCache->getMemCache()
+#1 C:\xampp\htdocs\mads\yii\framework\base\CModule.php(387): CMemCache->init()
+#2 C:\xampp\htdocs\mads\yii\framework\base\CModule.php(103): CModule->getComponent('cache')
+#3 C:\xampp\htdocs\mads\public_html\protected\models\MediaFiles.php(223): CModule->__get('cache')
+#4 C:\xampp\htdocs\mads\public_html\protected\models\ActiveRecord.php(80): MediaFiles::storeMediaFileURLInCache('user_id', '25', 'profile_picture...', '/E:/xampp/htdoc...')
+#5 C:\xampp\htdocs\mads\public_html\protected\components\library\ViewFormHelper.php(32): ActiveRecord->getUploadedFileFullPath('profile_picture')
+#6 C:\xampp\htdocs\mads\public_html\protected\views\user\_form_update.php(129): ViewFormHelper::imageActions(Object(UserController), Object(Users), 'profile_picture', Array)
+#7 C:\xampp\htdocs\mads\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#8 C:\xampp\htdocs\mads\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\mads\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#10 C:\xampp\htdocs\mads\public_html\protected\views\user\update.php(18): CController->renderPartial('_form_update', Array)
+#11 C:\xampp\htdocs\mads\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#12 C:\xampp\htdocs\mads\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\mads\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#14 C:\xampp\htdocs\mads\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#15 C:\xampp\htdocs\mads\public_html\protected\controllers\UserController.php(99): CController->render('update', Array)
+#16 C:\xampp\htdocs\mads\yii\framework\web\actions\CInlineAction.php(49): UserController->actionUpdate()
+#17 C:\xampp\htdocs\mads\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\mads\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\mads\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\mads\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#21 C:\xampp\htdocs\mads\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/update')
+#22 C:\xampp\htdocs\mads\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\mads\public_html\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/mads/public_html/index.php?r=user/update&id=25
+---
+2014/02/24 11:39:48 [error] [exception.CException] exception 'CException' with message 'CMemCache requires PHP memcache extension to be loaded.' in C:\xampp\htdocs\mads\yii\framework\caching\CMemCache.php:116
+Stack trace:
+#0 C:\xampp\htdocs\mads\yii\framework\caching\CMemCache.php(89): CMemCache->getMemCache()
+#1 C:\xampp\htdocs\mads\yii\framework\base\CModule.php(387): CMemCache->init()
+#2 C:\xampp\htdocs\mads\yii\framework\base\CModule.php(103): CModule->getComponent('cache')
+#3 C:\xampp\htdocs\mads\public_html\protected\models\MediaFiles.php(223): CModule->__get('cache')
+#4 C:\xampp\htdocs\mads\public_html\protected\models\ActiveRecord.php(80): MediaFiles::storeMediaFileURLInCache('user_id', '25', 'profile_picture...', '/E:/xampp/htdoc...')
+#5 C:\xampp\htdocs\mads\public_html\protected\components\library\ViewFormHelper.php(32): ActiveRecord->getUploadedFileFullPath('profile_picture')
+#6 C:\xampp\htdocs\mads\public_html\protected\views\user\_form_update.php(129): ViewFormHelper::imageActions(Object(UserController), Object(Users), 'profile_picture', Array)
+#7 C:\xampp\htdocs\mads\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#8 C:\xampp\htdocs\mads\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\mads\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#10 C:\xampp\htdocs\mads\public_html\protected\views\user\update.php(18): CController->renderPartial('_form_update', Array)
+#11 C:\xampp\htdocs\mads\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#12 C:\xampp\htdocs\mads\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\mads\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#14 C:\xampp\htdocs\mads\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#15 C:\xampp\htdocs\mads\public_html\protected\controllers\UserController.php(99): CController->render('update', Array)
+#16 C:\xampp\htdocs\mads\yii\framework\web\actions\CInlineAction.php(49): UserController->actionUpdate()
+#17 C:\xampp\htdocs\mads\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\mads\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\mads\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\mads\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#21 C:\xampp\htdocs\mads\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/update')
+#22 C:\xampp\htdocs\mads\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\mads\public_html\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/mads/public_html/index.php?r=user/update&id=25
+---

@@ -3,7 +3,9 @@
 /* @var $model LoginForm */
 /* @var $form CActiveForm  */
 /* @var $cs CClientScript  */
-
+echo "kk";
+		exit;
+		
 $this->pageTitle=Yii::app()->name . ' - Login';
 
 ?>
